@@ -1,0 +1,33 @@
+2. Bloque Teórico y Calidad Ágil (30 Minutos recomendados)
+
+Pregunta 2.1: Gestión de Contratos y Flujos en el Sprint
+
+Durante la planificación de un Sprint, se asigna una Historia de Usuario para automatizar el nuevo
+backend transaccional de NYXN, pero el equipo de desarrollo aún no despliega los endpoints finales.
+
+- ¿Cómo aplicarías el concepto de Pruebas Tempranas (Early Testing) para automatizar sin
+depender del despliegue del backend?
+
+R//:
+
+Según mi experiencia se deben debatir y acordar previamente con desarrollo las siguientes ideas:
+1. crear mocks o maquetas de datos para simular los endpoints que desarrollo no ha finalizado.  
+2. dentro de la historia de usuario exponer la estructura del endpoint con sus respectivos datos, tipos, headers, codigos http, tokens... es decir, clarificar el contrato dentro de la HU para que el mock lo pueda copiar
+3. definir un ambiente de pruebas para que el mock pueda correr
+4. claficar otras dependencias con los endpoints
+
+- Define qué requerirías en el Definition of Ready (DoR) para aceptar la HU y qué automatizaciones
+mínimas exigirías en el Definition of Done (DoD).
+
+R//:
+
+Para aceptar la HU con el DoR:
+- contrato del endpoint (API) definido
+- ambiente de prueba y simulación de mocks configurado o fecha en la que se tendría el ambiente
+- listado de dependiencias para aquellos end points 
+- flujos de negocios completos o escenarios de prueba
+- datos que va a usar la automatización 
+
+Automatizaciones minimas DoD:- 
+- validación del flujo critico o linea base (camino feliz) con el contrato del end point
+- validación de un escenario de error o denegación de servicio
