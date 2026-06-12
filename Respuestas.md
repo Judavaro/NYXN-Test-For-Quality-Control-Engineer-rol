@@ -68,12 +68,9 @@ Explicación personal:
 - finalmente se valida la alerta con el código NYXN-503 y el mensaje de éxito.
 - como todo está mockeado, el test no depende del despliegue del backend.
 
-
 3. Parte B: API & Data Testing Express (pytest / REST Assured / Jest)
 
-Explicación personal:
-
-En esta ocación no cuento con experiencia con Data Testing Express (pytest / REST Assured / Jest) pero me comprometo a nivelar a futuro.
+En esta ocación no cuento con experiencia con Data Testing Express (pytest / REST Assured / Jest) pero me comprometo a nivelar a futuro. Sin embargo use Claude AI para resolver el ejercicio y este funciona pero soy conciente de que no domino el alcance del reto por lo que leer la implementación me permitió conocer de que se trata.
 
 4. Bloque Avanzado: IA Generativa y Protocolo MCP (30 Minutos
 recomendados)
@@ -100,7 +97,8 @@ Igual, aún no lo pongo en práctica porque no he tenido la oportunidad de confi
 
 En esta ocación no cuento con experiencia con performance será un compromiso para nivelar a futuro.
 Sin embargo, cuento con experiencia en SLAs, KPIs y metricas para medir el rendimiento de procesos o sistemas, y entiendo que JMeter es una herramienta popular para realizar pruebas de carga y rendimiento. 
-Anque entendiendo el ejercicio, las metricas podrían ser:
+
+AUNQUE, entendiendo el ejercicio, las metricas podrían ser:
 
 1. Metrica 1: Percentil 95 del tiempo de respuesta (pct95 < 400 ms)
 2. Metrica 2: Tasa de error (Error % = 0.0%)
