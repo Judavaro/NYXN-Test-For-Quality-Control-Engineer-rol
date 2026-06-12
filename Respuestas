@@ -31,3 +31,15 @@ Para aceptar la HU con el DoR:
 Automatizaciones minimas DoD:- 
 - validación del flujo critico o linea base (camino feliz) con el contrato del end point
 - validación de un escenario de error o denegación de servicio
+
+Parte A: Intervención de Interfaz de Usuario (Playwright o Cypress)
+
+R//: Se crea el proyecto base con el patron POM por medio de VibeCoding (Cloude Code + Playwright MCP) para el escenario de autenticarse (camino feliz) y poder comprar producto cofirmando orden flujo completo. Con el fin de tener el proyecto base apra parte A. 
+
+Escenario crítico: autenticación (el usuario estándar puede iniciar sesión y ver el inventario)
+Escenario crítico: agregar producto al carrito (agregar un producto actualiza el contador del carrito)
+Escenario crítico: checkout del carrito (el producto agregado aparece en el resumen de Checkout: Overview) 
+Escenario crítico: compra exitosa (al finalizar desde Checkout: Overview se muestra "Thank you for your order!")
+
+Corriendo OK!
+
