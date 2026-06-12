@@ -1,4 +1,8 @@
 import { defineConfig, devices } from '@playwright/test';
+import path from 'path';
+
+/** Archivo donde el proyecto "setup" guarda la sesión autenticada. */
+export const STORAGE_STATE = path.join(__dirname, '.auth/user.json');
 
 export default defineConfig({
   testDir: './tests',
@@ -9,12 +13,21 @@ export default defineConfig({
     baseURL: 'https://www.saucedemo.com',
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',
-    headless: true,
+    headless: false,
   },
   projects: [
     {
-      name: 'chromium',
+      name: 'setup',
+      testMatch: /.*\.setup\.ts/,
       use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'chromium',
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: STORAGE_STATE,
+      },
+      dependencies: ['setup'],
     },
   ],
 });

@@ -43,3 +43,15 @@ Escenario crítico: compra exitosa (al finalizar desde Checkout: Overview se mue
 
 Corriendo OK!
 
+- Reto 1:Optimización de Sesión
+
+Explicación personal: 
+
+- se debe crear el directorio .auth manual o mkdir -p .auth
+- se debe crear la config para la autenticación de todos los test tests/auth.setup.ts para que este reutilice el login haciendo enfásis en que es distinto al test que valida el front del login
+- Se actualiza el fixture de authenticatedInventory para que solo nevegue hacia el inventario
+- se actualiza el playwright.config para que pueda consultar el archivo user.json que contiene el sesion y las cookies y que luego el proyecto de setup pueda hacer match con este archivo (ubique los datos)
+- finalmente, al proyecto de chromium se le setea el storageState como dependencia que se consulta de user.json para que cargue siempre esas credenciales.
+- Para corroborar esto, cuando el archivo user.json se presente, eliminarlo para notar la dif.
+- valdiación adicional, si se ejecuta en paralelo reusa el login pero al ejecutar 1-1 los test es mejor validar que el archivo user.json exista para que en realidad si reuse la session. 
+
