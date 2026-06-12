@@ -55,3 +55,15 @@ Explicación personal:
 - Para corroborar esto, cuando el archivo user.json se presente, eliminarlo para notar la dif.
 - valdiación adicional, si se ejecuta en paralelo reusa el login pero al ejecutar 1-1 los test es mejor validar que el archivo user.json exista para que en realidad si reuse la session. 
 
+
+Reto 2:Mocking de Red
+
+Explicación personal:
+
+- se crean varios mocks con el contrato simulado por decir la url,el body 503 y HTML de la página.
+- ese HTML tiene un botón que hace un fetch real al endpoint y muestra éxito o alerta según la respuesta.
+- creamos el POM sus locators y métodos, y se registra en el fixture de pages. (normal)
+- en el test un page.route entrega el HTML de la página y otro responde el 503 con su body.
+- con waitForResponse ahcemos el paso a validar el status 503, confirmando que la petición se ejecutó.
+- finalmente se valida la alerta con el código NYXN-503 y el mensaje de éxito.
+- como todo está mockeado, el test no depende del despliegue del backend.

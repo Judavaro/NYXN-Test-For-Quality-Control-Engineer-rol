@@ -5,6 +5,7 @@ import { CartPage } from '../pages/CartPage';
 import { CheckoutStepOnePage } from '../pages/CheckoutStepOnePage';
 import { CheckoutOverviewPage } from '../pages/CheckoutOverviewPage';
 import { CheckoutCompletePage } from '../pages/CheckoutCompletePage';
+import { CorporateOrdersPage } from '../pages/CorporateOrdersPage';
 
 interface Pages {
   loginPage: LoginPage;
@@ -13,6 +14,7 @@ interface Pages {
   checkoutStepOnePage: CheckoutStepOnePage;
   checkoutOverviewPage: CheckoutOverviewPage;
   checkoutCompletePage: CheckoutCompletePage;
+  corporateOrdersPage: CorporateOrdersPage;
   /**
    * Página de inventario con sesión ya iniciada. La autenticación proviene
    * del Storage State generado por tests/auth.setup.ts, no de un login gráfico.
@@ -38,6 +40,9 @@ export const test = base.extend<Pages>({
   },
   checkoutCompletePage: async ({ page }, use) => {
     await use(new CheckoutCompletePage(page));
+  },
+  corporateOrdersPage: async ({ page }, use) => {
+    await use(new CorporateOrdersPage(page));
   },
   authenticatedInventory: async ({ page, inventoryPage }, use) => {
     await page.goto('/inventory.html');
