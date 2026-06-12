@@ -94,7 +94,28 @@ Posible prompt:
 
 Igual, aún no lo pongo en práctica porque no he tenido la oportunidad de configurar el MCP, pero me parece una herramienta muy interesante para optimizar el mantenimiento de los test y reducir el tiempo de diagnóstico y corrección de fallas en los test automatizados.
 
+5. Diagnóstico de Rendimiento y Pipeline CI/CD
 
+- Análisis de Carga (JMeter)
 
+En esta ocación no cuento con experiencia con performance será un compromiso para nivelar a futuro.
+Cuento con experiencia en SLAs, KPIs y metricas para medir el rendimiento de procesos o sistemas, y entiendo que JMeter es una herramienta popular para realizar pruebas de carga y rendimiento. 
 
- 
+- Mantenimiento de Pipeline como Código (YAML)
+
+steps:
+- uses: actions/checkout@v4
+- name: Setup Node
+- uses: actions/setup-node@v4
+  with: { node-version: 20 }
+- name: Run Tests
+
+  run: npm ci && npx playwright test (puede ser cualquier comando que ejecute los test)
+- name: Save Test Reports Artifacts
+  if: always()  (garantiza que el step se ejecute aunque un paso anterior haya fallado)
+  uses: actions/upload-artifact@v4 : (este permite subir los reportes generados por Playwright y Allure como artefactos del workflow, para que puedan ser descargados y revisados posteriormente)
+    with:
+      name: allure-results
+      path: |
+      playwright-report
+      allure-results
