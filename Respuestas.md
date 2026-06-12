@@ -100,6 +100,10 @@ Igual, aún no lo pongo en práctica porque no he tenido la oportunidad de confi
 
 En esta ocación no cuento con experiencia con performance será un compromiso para nivelar a futuro.
 Sin embargo, cuento con experiencia en SLAs, KPIs y metricas para medir el rendimiento de procesos o sistemas, y entiendo que JMeter es una herramienta popular para realizar pruebas de carga y rendimiento. 
+Anque entendiendo el ejercicio, las metricas podrían ser:
+
+1. Metrica 1: Percentil 95 del tiempo de respuesta (pct95 < 400 ms)
+2. Metrica 2: Tasa de error (Error % = 0.0%)
 
 - Mantenimiento de Pipeline como Código (YAML)
 

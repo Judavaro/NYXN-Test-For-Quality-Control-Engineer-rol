@@ -6,6 +6,7 @@
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
+    "test:api": "jest",
     "report": "playwright show-report"
   },
   "repository": {
@@ -22,7 +23,11 @@
   "homepage": "https://github.com/Judavaro/NYXN-Test-For-Quality-Control-Engineer-rol#readme",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
+    "@types/jest": "^30.0.0",
     "@types/node": "^25.9.3",
+    "ajv": "^8.20.0",
+    "jest": "^30.4.2",
+    "ts-jest": "^29.4.11",
     "typescript": "^6.0.3"
   }
 }
