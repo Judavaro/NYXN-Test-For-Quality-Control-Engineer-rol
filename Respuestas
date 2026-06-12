@@ -62,8 +62,39 @@ Explicación personal:
 
 - se crean varios mocks con el contrato simulado por decir la url,el body 503 y HTML de la página.
 - ese HTML tiene un botón que hace un fetch real al endpoint y muestra éxito o alerta según la respuesta.
-- creamos el POM sus locators y métodos, y se registra en el fixture de pages. (normal)
+- creamos el POM y se registra en el fixture de pages. (normal)
 - en el test un page.route entrega el HTML de la página y otro responde el 503 con su body.
 - con waitForResponse ahcemos el paso a validar el status 503, confirmando que la petición se ejecutó.
 - finalmente se valida la alerta con el código NYXN-503 y el mensaje de éxito.
 - como todo está mockeado, el test no depende del despliegue del backend.
+
+
+Parte B: API & Data Testing Express (pytest / REST Assured / Jest)
+
+Explicación personal:
+
+N/A
+
+4. Bloque Avanzado: IA Generativa y Protocolo MCP (30 Minutos
+recomendados)
+
+Respuesta personal, anque, aún no he tenido la oportunidad de configurar el MCP para CI/CD, según 
+entiendo esta puede ser una respuesta según investigación y lectura previa:
+
+Al tener Claude Code contexto de todo el proyecto conectamos el GitHub MCP al logs del pipeline y Playwright MCP.
+Puede ser con estos comandos: claude mcp add github ... y claude mcp add playwright -- npx @playwright/mcp@latest
+
+Posible prompt: 
+
+- "con el MCP de GitHub lee el log del último run fallido del workflow e2e."
+- "compara el error con el DOM/JSON real (Playwright MCP) e identifica los selectores que cambiaron."
+- "corrige SOLO los archivos de mapeo en pages/ y fixtures/, sin tocar aserciones ni lógica."
+- "ejecuta npx playwright test, repite hasta que pasen y muéstrame la diferencia de los cambios."
+- seguridad: trabajar en una rama y entregar PR; un humano revisa antes del merge.
+
+Igual, aún no lo pongo en práctica porque no he tenido la oportunidad de configurar el MCP, pero me parece una herramienta muy interesante para optimizar el mantenimiento de los test y reducir el tiempo de diagnóstico y corrección de fallas en los test automatizados.
+
+
+
+
+ 
