@@ -32,7 +32,7 @@ Automatizaciones minimas DoD:-
 - validación del flujo critico o linea base (camino feliz) con el contrato del end point
 - validación de un escenario de error o denegación de servicio
 
-Parte A: Intervención de Interfaz de Usuario (Playwright o Cypress)
+3. Parte A: Intervención de Interfaz de Usuario (Playwright o Cypress)
 
 R//: Se crea el proyecto base con el patron POM por medio de VibeCoding (Cloude Code + Playwright MCP) para el escenario de autenticarse (camino feliz) y poder comprar producto cofirmando orden flujo completo. Con el fin de tener el proyecto base apra parte A. 
 
@@ -69,11 +69,11 @@ Explicación personal:
 - como todo está mockeado, el test no depende del despliegue del backend.
 
 
-Parte B: API & Data Testing Express (pytest / REST Assured / Jest)
+3. Parte B: API & Data Testing Express (pytest / REST Assured / Jest)
 
 Explicación personal:
 
-N/A
+En esta ocación no cuento con experiencia con Data Testing Express (pytest / REST Assured / Jest) pero me comprometo a nivelar a futuro.
 
 4. Bloque Avanzado: IA Generativa y Protocolo MCP (30 Minutos
 recomendados)
@@ -99,7 +99,7 @@ Igual, aún no lo pongo en práctica porque no he tenido la oportunidad de confi
 - Análisis de Carga (JMeter)
 
 En esta ocación no cuento con experiencia con performance será un compromiso para nivelar a futuro.
-Cuento con experiencia en SLAs, KPIs y metricas para medir el rendimiento de procesos o sistemas, y entiendo que JMeter es una herramienta popular para realizar pruebas de carga y rendimiento. 
+Sin embargo, cuento con experiencia en SLAs, KPIs y metricas para medir el rendimiento de procesos o sistemas, y entiendo que JMeter es una herramienta popular para realizar pruebas de carga y rendimiento. 
 
 - Mantenimiento de Pipeline como Código (YAML)
 
